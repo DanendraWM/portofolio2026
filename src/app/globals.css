@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #f4f7fc;
+  --surface: #ffffff;
+  --ink: #0d1626;
+  --muted: #4a5a75;
+  --line: #cbd5e6;
+  --accent: #9a5b06;
+  --accent-fill: #f2b14a;
+  --on-accent: #0d1626;
+}
+
+.dark {
+  --background: #0d1626;
+  --surface: #17233a;
+  --ink: #e9eef7;
+  --muted: #a9b6cc;
+  --line: #3a4c6b;
+  --accent: #f2b14a;
+  --accent-fill: #f2b14a;
+  --on-accent: #0d1626;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-fill: var(--accent-fill);
+  --color-on-accent: var(--on-accent);
+  --color-portrait-panel: #dfe7f3;  --font-sans: var(--font-inter);
+  --font-display: var(--font-sora);
+  --font-mono: var(--font-jetbrains-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--ink);
+  font-family: var(--font-sans);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Runs in CSS, not JS, so hero text is visible as soon as the HTML arrives. */
+@keyframes intro {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+}
+
+@keyframes intro-fade {
+  from {
+    opacity: 0;
+  }
+}
+
+.intro {
+  animation: intro 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: var(--delay, 0s);
+}
+
+/* --p is the diagram's flatten progress: 0 is tilted in 3D, 1 is flat. GSAP scrubs it. */
+.hero-scene {
+  --p: 0;
+  perspective: 1100px;
+}
+
+.hero-plane {
+  /* A gentle turn, so the portrait stays a natural view of a face. */
+  transform: rotateY(calc((1 - var(--p)) * -16deg)) rotateX(calc((1 - var(--p)) * 6deg));
+  transform-style: preserve-3d;
+}
+
+.hero-node {
+  transform: translate(-50%, -50%) translateZ(calc((1 - var(--p)) * var(--lift)));
+  animation: intro-fade 0.6s ease-out both;
+  animation-delay: var(--delay, 0s);
+}
+
+.blueprint-grid {
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 2.5rem 2.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-scene {
+    --p: 1;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

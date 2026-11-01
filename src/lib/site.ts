@@ -1,0 +1,8 @@
+// NEXT_PUBLIC_SITE_URL wins once a custom domain exists; until then Vercel provides the production URL.
+function resolveSiteUrl() {
+  if (process.env.NEXT_PUBLIC_SITE_URL) return process.env.NEXT_PUBLIC_SITE_URL;
+  if (process.env.VERCEL_PROJECT_PRODUCTION_URL) return `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`;
+  return "http://localhost:3000";
+}
+
+export const siteUrl = resolveSiteUrl();
