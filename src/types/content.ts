@@ -10,6 +10,7 @@ export type Education = {
   school: string;
   period: string;
   note?: string;
+  image?: { src: string; alt: string };
 };
 
 export type Achievement = {
@@ -83,6 +84,13 @@ export type Content = {
     groups: { label: string; items: string[] }[];
     certificationsLabel: string;
     certifications: { title: string; issuer: string; year?: string }[];
+  };
+  outside: {
+    label: string;
+    title: string;
+    items: { title: string; caption: string; note?: string; images: { src: string; alt: string; position?: string }[] }[];
+    favoritesLabel: string;
+    favorites: { label: string; items: string[]; note?: string }[];
   };
   services: {
     label: string;

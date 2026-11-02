@@ -3,9 +3,8 @@ import type { Content } from "@/types/content";
 // Jangan sebut nama klien atau produk di teks project: jelaskan pekerjaannya, bukan sistemnya.
 export const id: Content = {
   meta: {
-    title: "Danendra Wyanta Mustofa | Technical Support & Backend Developer",
-    description:
-      "Technical support engineer di Jakarta yang sedang berkembang ke backend development. Lebih dari 3 tahun menangani aplikasi production, PHP, Laravel, dan Oracle. Terbuka untuk posisi backend dan project UMKM.",
+    title: "Danendra Wyanta Mustofa | Backend & Technical Support",
+    description: "Technical support engineer di Jakarta yang beralih ke backend, 3+ tahun dengan PHP, Laravel, dan Oracle. Terbuka untuk posisi dan project.",
     ogLocale: "id_ID",
   },
   ui: {
@@ -109,6 +108,7 @@ export const id: Content = {
         school: "Universitas Bina Sarana Informatika",
         period: "Lulus Feb 2026",
         note: "IPK 3,60/4,00",
+        image: { src: "/images/graduation.jpg", alt: "Danendra mengenakan toga biru dan topi wisuda, memegang tabung ijazah" },
       },
       {
         degree: "Rekayasa Perangkat Lunak",
@@ -199,6 +199,63 @@ export const id: Content = {
       { title: "Laravel 12 + React", issuer: "BuildWithAngga" },
       { title: "Laravel + Flutter", issuer: "BuildWithAngga" },
       { title: "Web Security", issuer: "BuildWithAngga" },
+    ],
+  },
+  outside: {
+    label: "di luar kerja",
+    title: "Beberapa hal yang tidak ada di CV saya.",
+    items: [
+      {
+        title: "Koordinator English club kantor",
+        caption: "Pada 2024–2025 saya melaporkan keuangan klub, berdiskusi dengan coach soal jadwal, biaya, dan materi, serta mengajak teman-teman supaya tetap ramai.",
+        note: "Wajah diburamkan demi privasi.",
+        images: [
+          {
+            src: "/images/english-club-blurred.jpg",
+            alt: "Sekelompok orang berfoto di ruang meeting dengan wajah diburamkan, dan kalimat latihan bahasa Inggris di papan tulis",
+            position: "31% 50%",
+          },
+        ],
+      },
+      {
+        title: "Sindoro dan Merbabu",
+        caption: "Sudah dua kali naik gunung. Pertama Sindoro, berdua saja dengan sahabat, minim pengetahuan, modal nekat, dan dekil. Kedua Merbabu lewat open trip, tetap melelahkan, tapi lebih bersih, dan fotonya pakai iPhone rekan.",
+        images: [
+          {
+            src: "/images/sindoro.jpg",
+            alt: "Danendra yang berdebu mengacungkan jempol di samping papan puncak Gunung Sindoro, 3.153 mdpl",
+            position: "50% 60%",
+          },
+          {
+            src: "/images/merbabu.jpg",
+            alt: "Danendra melipat tangan di lereng berumput Gunung Merbabu, dengan gunung di belakangnya",
+            position: "0% 50%",
+          },
+        ],
+      },
+      {
+        title: "Onyo",
+        caption: "Kucing saya, dibeli di Pasar Jatinegara saat kondisinya menyedihkan. Terkenal dengan wajah bodohnya, tapi cukup pintar untuk selalu buang air di kamar mandi.",
+        images: [
+          {
+            src: "/images/onyo.jpg",
+            alt: "Onyo, kucing belang tiga, duduk di kursi kantor hitam sambil menatap kamera",
+            position: "50% 75%",
+          },
+        ],
+      },
+    ],
+    favoritesLabel: "yang sering diputar",
+    favorites: [
+      {
+        label: "musik",
+        items: ["Oasis", "Blur", "The Stone Roses", "The Verve", "The Smiths", "The SIGIT", "Morfem", "Rumahsakit", "The Jeblogs"],
+        note: "Britpop bikin semangat.",
+      },
+      { label: "game", items: ["Ghost of Tsushima", "Red Dead Redemption"] },
+      { label: "anime", items: ["Attack on Titan", "Naruto", "Dragon Ball", "Detective Conan", "Captain Tsubasa", "One Piece"] },
+      { label: "buku", items: ["Dunia Sophie"], note: "Masih dibaca, pelan-pelan karena tebal." },
+      { label: "olahraga", items: ["Main bola"] },
     ],
   },
   services: {

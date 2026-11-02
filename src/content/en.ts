@@ -3,9 +3,8 @@ import type { Content } from "@/types/content";
 // Keep client and product names out of the project text: describe the work, not the system.
 export const en: Content = {
   meta: {
-    title: "Danendra Wyanta Mustofa | Technical Support & Backend Developer",
-    description:
-      "Technical support engineer in Jakarta growing into backend development. 3+ years with production applications, PHP, Laravel, and Oracle. Open to backend roles and small-business projects.",
+    title: "Danendra Wyanta Mustofa | Backend & Technical Support",
+    description: "Technical support engineer in Jakarta moving into backend, with 3+ years of PHP, Laravel, and Oracle. Open to roles and projects.",
     ogLocale: "en_US",
   },
   ui: {
@@ -109,6 +108,7 @@ export const en: Content = {
         school: "Universitas Bina Sarana Informatika",
         period: "Graduated Feb 2026",
         note: "GPA 3.60/4.00",
+        image: { src: "/images/graduation.jpg", alt: "Danendra in a blue graduation gown and cap, holding a diploma case" },
       },
       {
         degree: "Software Engineering",
@@ -199,6 +199,63 @@ export const en: Content = {
       { title: "Laravel 12 + React", issuer: "BuildWithAngga" },
       { title: "Laravel + Flutter", issuer: "BuildWithAngga" },
       { title: "Web Security", issuer: "BuildWithAngga" },
+    ],
+  },
+  outside: {
+    label: "outside work",
+    title: "A few things that aren't on my CV.",
+    items: [
+      {
+        title: "Office English club coordinator",
+        caption: "In 2024–2025 I reported the club's finances, worked out schedules, fees, and materials with the coach, and kept people coming.",
+        note: "Faces blurred for privacy.",
+        images: [
+          {
+            src: "/images/english-club-blurred.jpg",
+            alt: "A group posing in a meeting room with their faces blurred, and English practice sentences on the whiteboard",
+            position: "31% 50%",
+          },
+        ],
+      },
+      {
+        title: "Sindoro and Merbabu",
+        caption: "I've climbed twice. Sindoro came first, just me and my best friend, with little knowledge, a lot of nerve, and plenty of dirt. Merbabu was an open trip, still exhausting, but I stayed cleaner, and a colleague's iPhone took the photo.",
+        images: [
+          {
+            src: "/images/sindoro.jpg",
+            alt: "Danendra, covered in dust, giving a thumbs up beside the Mount Sindoro summit sign, 3,153 meters",
+            position: "50% 60%",
+          },
+          {
+            src: "/images/merbabu.jpg",
+            alt: "Danendra with arms crossed on a grassy slope of Mount Merbabu, with a mountain behind",
+            position: "0% 50%",
+          },
+        ],
+      },
+      {
+        title: "Onyo",
+        caption: "My cat. I bought Onyo at Pasar Jatinegara, looking miserable at the time. Known for that silly face, and smart enough to always use the bathroom.",
+        images: [
+          {
+            src: "/images/onyo.jpg",
+            alt: "Onyo, a calico cat, sitting on a black office chair and staring at the camera",
+            position: "50% 75%",
+          },
+        ],
+      },
+    ],
+    favoritesLabel: "what's on rotation",
+    favorites: [
+      {
+        label: "music",
+        items: ["Oasis", "Blur", "The Stone Roses", "The Verve", "The Smiths", "The SIGIT", "Morfem", "Rumahsakit", "The Jeblogs"],
+        note: "Britpop gets me going.",
+      },
+      { label: "games", items: ["Ghost of Tsushima", "Red Dead Redemption"] },
+      { label: "anime", items: ["Attack on Titan", "Naruto", "Dragon Ball", "Detective Conan", "Captain Tsubasa", "One Piece"] },
+      { label: "books", items: ["Sophie's World"], note: "Still reading, slowly, because it's thick." },
+      { label: "sport", items: ["Football"] },
     ],
   },
   services: {

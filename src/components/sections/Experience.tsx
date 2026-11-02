@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useRef } from "react";
 import { Reveal } from "@/components/ui/Reveal";
 import { Section } from "@/components/ui/Section";
@@ -59,13 +60,20 @@ export function Experience({ content }: { content: Content["experience"] }) {
         <h3 className="font-mono text-sm text-accent">{content.educationLabel}</h3>
         <ul className="mt-4 grid gap-4 md:grid-cols-2">
           {content.education.map((item) => (
-            <li key={item.school} className="rounded-xl border border-line bg-surface p-5">
-              <p className="font-medium text-ink">{item.degree}</p>
-              <p className="mt-1 text-muted">{item.school}</p>
-              <p className="mt-2 font-mono text-sm text-muted">
-                {item.period}
-                {item.note ? ` · ${item.note}` : ""}
-              </p>
+            <li key={item.school} className="flex gap-4 rounded-xl border border-line bg-surface p-5">
+              {item.image && (
+                <div className="relative aspect-[3/4] w-20 shrink-0 overflow-hidden rounded-lg sm:w-24">
+                  <Image src={item.image.src} alt={item.image.alt} fill sizes="96px" className="object-cover object-top" />
+                </div>
+              )}
+              <div>
+                <p className="font-medium text-ink">{item.degree}</p>
+                <p className="mt-1 text-muted">{item.school}</p>
+                <p className="mt-2 font-mono text-sm text-muted">
+                  {item.period}
+                  {item.note ? ` · ${item.note}` : ""}
+                </p>
+              </div>
             </li>
           ))}
         </ul>

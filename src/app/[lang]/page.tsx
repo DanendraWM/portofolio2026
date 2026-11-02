@@ -4,6 +4,7 @@ import { Achievements } from "@/components/sections/Achievements";
 import { Contact } from "@/components/sections/Contact";
 import { Experience } from "@/components/sections/Experience";
 import { Hero } from "@/components/sections/Hero";
+import { Outside } from "@/components/sections/Outside";
 import { Projects } from "@/components/sections/Projects";
 import { Services } from "@/components/sections/Services";
 import { Skills } from "@/components/sections/Skills";
@@ -42,6 +43,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
         <Experience content={content.experience} />
         <Projects content={content.projects} />
         <Skills content={content.skills} />
+        <Outside content={content.outside} />
         <Services content={content.services} />
         <Contact content={content.contact} lang={lang} />
       </main>
